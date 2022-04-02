@@ -1,3 +1,4 @@
+-- 视频地址：https://www.bilibili.com/video/BV1Uu411i7jf
 -- 创建地铁线路表
 CREATE TABLE bj_subway(
   station_id INT NOT NULL PRIMARY KEY,
