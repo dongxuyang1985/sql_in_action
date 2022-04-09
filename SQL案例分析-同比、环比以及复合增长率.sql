@@ -1,4 +1,4 @@
--- 视频地址：
+-- 视频地址：https://www.bilibili.com/video/BV1JY4y1H73Q
 -- 创建销量表sales_monthly
 -- product表示产品名称，ym表示年月，amount表示销售金额（元）
 CREATE TABLE sales_monthly(product VARCHAR(20), ym VARCHAR(10), amount NUMERIC(10, 2));
