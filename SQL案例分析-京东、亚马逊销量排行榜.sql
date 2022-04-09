@@ -1,3 +1,4 @@
+-- 视频地址：https://www.bilibili.com/video/BV1hY4y1W7k1
 -- 创建示例表
 create table products(
   product_id integer not null primary key,
