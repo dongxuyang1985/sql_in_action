@@ -1,19 +1,7 @@
--- 案例一：生成数字序列
--- 创建示例表t_number
-CREATE TABLE t_number(n INTEGER PRIMARY KEY);
-INSERT INTO t_number VALUES (0);
-INSERT INTO t_number VALUES (1);
-INSERT INTO t_number VALUES (2);
-INSERT INTO t_number VALUES (3);
-INSERT INTO t_number VALUES (4);
-INSERT INTO t_number VALUES (5);
-INSERT INTO t_number VALUES (6);
-INSERT INTO t_number VALUES (7);
-INSERT INTO t_number VALUES (8);
-INSERT INTO t_number VALUES (9);
+-- 视频地址：https://b23.tv/quWCUSc
+-- 员工表的创建脚本：https://github.com/dongxuyang1985/thinking_in_sql
 
-
--- 案例二：员工考勤记录
+-- 员工考勤记录
 -- 创建日历表calendar
 CREATE TABLE calendar(
   id             INTEGER NOT NULL PRIMARY KEY, -- 日历编号
