@@ -1,4 +1,4 @@
-# 视频地址：
+# 视频地址：https://www.bilibili.com/video/BV1644y137iT
 
 # 员工表的创建脚本：https://github.com/dongxuyang1985/thinking_in_sql
 # 将每个部门中的多个员工姓名合并成一行数据，多个姓名之间使用分号进行分隔
