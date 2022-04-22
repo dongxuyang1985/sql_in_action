@@ -33,7 +33,7 @@ INSERT INTO movies VALUES (3, '唐伯虎点秋香', '喜剧、古装、爱情’
 
 # 拆分字符串
 WITH RECURSIVE t(id, name, sub, str) AS (
-    SELECT id, name, substr(class, 1, instr(class, '、')-1), substr(concat(class,'、'), instr(class, '、')+1) 
+    SELECT id, name, substr(concat(class,'、'), 1, instr(concat(class,'、'), '、')-1), substr(concat(class,'、'), instr(concat(class,'、'), '、')+1) 
     FROM movies
     UNION ALL
     SELECT id, name,substr(str, 1, instr(str, '、')-1), substr(str, instr(str, '、')+1)
