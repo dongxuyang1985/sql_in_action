@@ -1,4 +1,4 @@
--- 视频地址：
+-- 视频地址：https://www.bilibili.com/video/BV1GZ4y117fS/
 -- 创建示例表
 CREATE TABLE users(
   id integer PRIMARY KEY,
