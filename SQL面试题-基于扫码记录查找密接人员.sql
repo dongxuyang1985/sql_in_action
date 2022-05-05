@@ -1,4 +1,4 @@
--- 视频地址：
+-- 视频地址：https://www.bilibili.com/video/BV1g44y137Az/
 -- 创建示例表和数据
 CREATE TABLE trail(
   uid varchar(11) NOT NULL,
