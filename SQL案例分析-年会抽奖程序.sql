@@ -1,4 +1,5 @@
 -- 员工表
+-- https://github.com/dongxuyang1985/thinking_in_sql
 
 -- 幸运员工表
 CREATE TABLE luck_emp(
