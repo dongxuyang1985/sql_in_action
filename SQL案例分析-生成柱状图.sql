@@ -51,20 +51,20 @@ ORDER BY count(*) DESC;
 -- MySQL、Microsoft SQL Server以及SQLite
  WITH d AS (
   SELECT row_number() OVER (PARTITION BY dept_id ORDER BY emp_id) rn,
-         CASE WHEN dept_id=1 THEN '█' END dept1,
-         CASE WHEN dept_id=2 THEN '█' END dept2,
-         CASE WHEN dept_id=3 THEN '█' END dept3,
-         CASE WHEN dept_id=4 THEN '█' END dept4,
-         CASE WHEN dept_id=5 THEN '█' END dept5,
-         CASE WHEN dept_id=6 THEN '█' END dept6
+         CASE WHEN dept_id=1 THEN '█' ELSE '' END dept1,
+         CASE WHEN dept_id=2 THEN '█' ELSE '' END dept2,
+         CASE WHEN dept_id=3 THEN '█' ELSE '' END dept3,
+         CASE WHEN dept_id=4 THEN '█' ELSE '' END dept4,
+         CASE WHEN dept_id=5 THEN '█' ELSE '' END dept5,
+         CASE WHEN dept_id=6 THEN '█' ELSE '' END dept6
   FROM employee
 ) 
-SELECT min(dept1) "行政管理部",
-       min(dept2) "人力资源部",
-       min(dept3) "财务部",
-       min(dept4) "研发部",
-       min(dept5) "销售部",
-       min(dept6) "保卫部"
+SELECT max(dept1) "行政管理部",
+       max(dept2) "人力资源部",
+       max(dept3) "财务部",
+       max(dept4) "研发部",
+       max(dept5) "销售部",
+       max(dept6) "保卫部"
 FROM d
 GROUP BY rn
 ORDER BY 1, 2, 3, 4, 5, 6;
@@ -72,20 +72,20 @@ ORDER BY 1, 2, 3, 4, 5, 6;
 --  Oracle、PostgreSQL
 WITH d AS (
   SELECT row_number() OVER (PARTITION BY dept_id ORDER BY emp_id) rn,
-         CASE WHEN dept_id=1 THEN '█' END dept1,
-         CASE WHEN dept_id=2 THEN '█' END dept2,
-         CASE WHEN dept_id=3 THEN '█' END dept3,
-         CASE WHEN dept_id=4 THEN '█' END dept4,
-         CASE WHEN dept_id=5 THEN '█' END dept5,
-         CASE WHEN dept_id=6 THEN '█' END dept6
+         CASE WHEN dept_id=1 THEN '█' ELSE '' END dept1,
+         CASE WHEN dept_id=2 THEN '█' ELSE '' END dept2,
+         CASE WHEN dept_id=3 THEN '█' ELSE '' END dept3,
+         CASE WHEN dept_id=4 THEN '█' ELSE '' END dept4,
+         CASE WHEN dept_id=5 THEN '█' ELSE '' END dept5,
+         CASE WHEN dept_id=6 THEN '█' ELSE '' END dept6
   FROM employee
 ) 
-SELECT min(dept1) "行政管理部",
-       min(dept2) "人力资源部",
-       min(dept3) "财务部",
-       min(dept4) "研发部",
-       min(dept5) "销售部",
-       min(dept6) "保卫部"
+SELECT max(dept1) "行政管理部",
+       max(dept2) "人力资源部",
+       max(dept3) "财务部",
+       max(dept4) "研发部",
+       max(dept5) "销售部",
+       max(dept6) "保卫部"
 FROM d
 GROUP BY rn
 ORDER BY 1 DESC, 2 DESC, 3 DESC, 4 DESC, 5 DESC, 6 DESC;
