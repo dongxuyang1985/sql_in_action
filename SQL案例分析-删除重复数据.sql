@@ -95,9 +95,10 @@ join people d on p.email = d.email and p.id < d.id;
 delete
 from people
 where id not in (
-      select max(id)
-      from people
-      group by email
+      select id 
+      from (select max(id) id
+            from people
+            group by email) t
      );
 
 -- 利用窗口函数删除重复数据
