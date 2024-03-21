@@ -964,19 +964,6 @@ INSERT INTO bj_subway VALUES (927,'亦庄T1线','亦创会展中心','经海一�
 INSERT INTO bj_subway VALUES (928,'亦庄T1线','经海一路','定海园西','老观里站-定海园');
 INSERT INTO bj_subway VALUES (929,'亦庄T1线','定海园西','定海园','老观里站-定海园');
 
--- 新地铁线路
--- SELECT 'INSERT INTO bj_subway VALUES ('||(SELECT max(station_id+s1.id) FROM bj_subway)||',''5号线'','''||s1.station_name||''','''||s2.station_name||''',''宋家庄-天通苑北'');'
--- FROM station s1
--- JOIN station s2 ON s1.id = s2.id -1;
-
--- 复制回程
-SELECT 'INSERT INTO bj_subway VALUES ('||(SELECT max(station_id*2+1) FROM bj_subway)-station_id||
-       ','''||line_name||''','''||next_station||''','''||station_name||''',''大兴机场-草桥'');'
-FROM bj_subway
-WHERE line_name = '大兴机场线'
-ORDER BY station_id DESC ;
-
-
 
 -- 查询“王府井”到“积水潭”的换乘路线
 -- MySQL
